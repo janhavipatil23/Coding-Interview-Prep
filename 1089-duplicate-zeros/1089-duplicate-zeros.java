@@ -1,6 +1,7 @@
 class Solution {
     public void duplicateZeros(int[] arr) {
-        Queue<Integer> q = new LinkedList<>();
+        
+    Queue<Integer> q = new LinkedList<>();
     
     for(int i=0; i<arr.length; i++){
         q.add(arr[i]);
