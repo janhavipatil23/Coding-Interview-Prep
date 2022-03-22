@@ -13,6 +13,4 @@ class Solution {
     return count;
     }
 }
-        
-              
-       
+     
