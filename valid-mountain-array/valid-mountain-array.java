@@ -1,20 +1,33 @@
 class Solution {
-   public boolean validMountainArray(int[] A) {
-        if (A == null || A.length < 3) return false;
+    public boolean validMountainArray(int[] arr) {
+//         if(arr == null || arr.length <3) return false;
         
-        boolean increasing = A[1] > A[0];
-        if (!increasing) return false; // the mountain must at least start in an increasing manner
+//         boolean increasing = arr[1] > arr[0];
+//         if(!increasing) return false;
         
-        for (int i = 1; i < A.length; i++) {
-            if (A[i] == A[i-1]) return false; //plateaus are prohibited
-            if (increasing) {
-                if (A[i] < A[i-1]) increasing = false; // we reached the peak
-            } else { // every element must be decreasing, otherwise return false
-                if (A[i] > A[i-1]) return false;
-            }
+//         for(int i=1; i<arr.length; i++){
+//             if(arr[i] == arr[i-1]) return false;
+            
+//             if(increasing){
+//                 if(arr[i] < arr[i-1]) increasing = false;
+//             }else{
+//                 if(arr[i] > arr[i+1]) return false;
+//             }
+//         }
+//         return !increasing;
+         int i=0;
+        int n = arr.length;
+        while(i<n-1 && arr[i]<arr[i+1]){
+            i++;
         }
+        if(i==0 || i==n-1){
+            return false;
+        }
+        while(i<n-1 && arr[i]>arr[i+1]){
+        i++;
+        }
+
+        return i==n-1;
         
-        // we can't just return true, we must ensure that a peak was reached at some point.
-        return !increasing ;
     }
 }
