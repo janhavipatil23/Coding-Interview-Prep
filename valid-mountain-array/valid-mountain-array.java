@@ -15,7 +15,8 @@ class Solution {
 //             }
 //         }
 //         return !increasing;
-         int i=0;
+        
+        int i=0;
         int n = arr.length;
         while(i<n-1 && arr[i]<arr[i+1]){
             i++;
