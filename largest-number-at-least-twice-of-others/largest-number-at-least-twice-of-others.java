@@ -34,7 +34,7 @@ class Solution {
             largest = 1;
             second = 0;
         }
-        // if (nums.length == 1) return 0;
+        if (nums.length == 1) return 0;
         for(int i = 2; i < nums.length; i++) {
             if (nums[i] > nums[largest]) {
                 second = largest;
